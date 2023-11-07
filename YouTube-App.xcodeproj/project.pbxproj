@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF4086A82AF7D7E600F25F19 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4086A72AF7D7E600F25F19 /* Response.swift */; };
 		DF5C46D22AF6C2210066DAF3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5C46D12AF6C2210066DAF3 /* Constants.swift */; };
 		DF5C46D42AF6C3730066DAF3 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5C46D32AF6C3730066DAF3 /* Video.swift */; };
 		DF5C46D72AF6CB460066DAF3 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5C46D62AF6CB460066DAF3 /* Model.swift */; };
-		DF5C46D92AF6DF500066DAF3 /* .gitignore.rtf in Resources */ = {isa = PBXBuildFile; fileRef = DF5C46D82AF6DF500066DAF3 /* .gitignore.rtf */; };
 		DF5C46DC2AF6DF840066DAF3 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5C46DB2AF6DF840066DAF3 /* API.swift */; };
 		DFCA6BB32AF3F236009894AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCA6BB22AF3F236009894AA /* AppDelegate.swift */; };
 		DFCA6BB52AF3F236009894AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCA6BB42AF3F236009894AA /* SceneDelegate.swift */; };
@@ -18,13 +18,14 @@
 		DFCA6BBA2AF3F236009894AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFCA6BB82AF3F236009894AA /* Main.storyboard */; };
 		DFCA6BBC2AF3F237009894AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFCA6BBB2AF3F237009894AA /* Assets.xcassets */; };
 		DFCA6BBF2AF3F237009894AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFCA6BBD2AF3F237009894AA /* LaunchScreen.storyboard */; };
+		DFFBC5162AFA8EBD008A4F6D /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFBC5152AFA8EBC008A4F6D /* Secret.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF4086A72AF7D7E600F25F19 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		DF5C46D12AF6C2210066DAF3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DF5C46D32AF6C3730066DAF3 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		DF5C46D62AF6CB460066DAF3 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		DF5C46D82AF6DF500066DAF3 /* .gitignore.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = .gitignore.rtf; sourceTree = "<group>"; };
 		DF5C46DB2AF6DF840066DAF3 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		DFCA6BAF2AF3F236009894AA /* YouTube-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YouTube-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFCA6BB22AF3F236009894AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +35,7 @@
 		DFCA6BBB2AF3F237009894AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFCA6BBE2AF3F237009894AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFCA6BC02AF3F237009894AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFFBC5152AFA8EBC008A4F6D /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF4086A92AF7FA9500F25F19 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DFCA6BB62AF3F236009894AA /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		DF5C46D52AF6CB360066DAF3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				DF5C46D12AF6C2210066DAF3 /* Constants.swift */,
+				DF4086A72AF7D7E600F25F19 /* Response.swift */,
 				DF5C46D32AF6C3730066DAF3 /* Video.swift */,
 			);
 			path = Views;
@@ -91,17 +102,17 @@
 		DFCA6BB12AF3F236009894AA /* YouTube-App */ = {
 			isa = PBXGroup;
 			children = (
+				DF4086A92AF7FA9500F25F19 /* ViewController */,
+				DF5C46D52AF6CB360066DAF3 /* Model */,
 				DF5C46DD2AF6DF960066DAF3 /* Views */,
 				DF5C46DA2AF6DF620066DAF3 /* Secret */,
-				DF5C46D52AF6CB360066DAF3 /* Model */,
 				DFCA6BB22AF3F236009894AA /* AppDelegate.swift */,
 				DFCA6BB42AF3F236009894AA /* SceneDelegate.swift */,
-				DFCA6BB62AF3F236009894AA /* ViewController.swift */,
 				DFCA6BB82AF3F236009894AA /* Main.storyboard */,
 				DFCA6BBB2AF3F237009894AA /* Assets.xcassets */,
 				DFCA6BBD2AF3F237009894AA /* LaunchScreen.storyboard */,
 				DFCA6BC02AF3F237009894AA /* Info.plist */,
-				DF5C46D82AF6DF500066DAF3 /* .gitignore.rtf */,
+				DFFBC5152AFA8EBC008A4F6D /* Secret.swift */,
 			);
 			path = "YouTube-App";
 			sourceTree = "<group>";
@@ -166,7 +177,6 @@
 			files = (
 				DFCA6BBF2AF3F237009894AA /* LaunchScreen.storyboard in Resources */,
 				DFCA6BBC2AF3F237009894AA /* Assets.xcassets in Resources */,
-				DF5C46D92AF6DF500066DAF3 /* .gitignore.rtf in Resources */,
 				DFCA6BBA2AF3F236009894AA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,12 +188,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF4086A82AF7D7E600F25F19 /* Response.swift in Sources */,
 				DFCA6BB72AF3F236009894AA /* ViewController.swift in Sources */,
 				DFCA6BB32AF3F236009894AA /* AppDelegate.swift in Sources */,
 				DFCA6BB52AF3F236009894AA /* SceneDelegate.swift in Sources */,
 				DF5C46D72AF6CB460066DAF3 /* Model.swift in Sources */,
 				DF5C46D22AF6C2210066DAF3 /* Constants.swift in Sources */,
 				DF5C46D42AF6C3730066DAF3 /* Video.swift in Sources */,
+				DFFBC5162AFA8EBD008A4F6D /* Secret.swift in Sources */,
 				DF5C46DC2AF6DF840066DAF3 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

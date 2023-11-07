@@ -8,6 +8,6 @@
 import Foundation
 
 func key() -> String {
-    let API_KEY: String = ""
+    let API_KEY: String = "AIzaSyDT5CtT8_SgRoXbVwRumpG8r09YozFofek"
     return API_KEY
 }
