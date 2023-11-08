@@ -14,9 +14,11 @@ class TableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    
+    //thumbnail
     @IBOutlet weak var thumbnailImageView: UIImageView!
+    //Label
     @IBOutlet weak var dateLabel: UILabel!
+    //Title
     @IBOutlet weak var title: UILabel!
     
     var video: Video?
@@ -43,7 +45,14 @@ class TableViewCell: UITableViewCell {
         self.dateLabel.text = df.string(from: video!.published)
         
         //set thumbnail
-        guard self.video?.thumbnail != nil else {
+        guard self.video!.thumbnail != "" else {
+            return
+        }
+        
+        //check cache data before download
+        if let cacheData = CacheManager.getVideoCache(self.video!.thumbnail){
+            
+            self.thumbnailImageView.image = UIImage(data: cacheData)
             return
         }
         //download the thumbnail date
@@ -56,13 +65,24 @@ class TableViewCell: UITableViewCell {
         let dataTask = session.dataTask(with: url!) { (data, response, error) in
             
             if error == nil && data != nil {
+                
+                //save the data in cache manager
+                CacheManager.setVideoCache(url!.absoluteString, data)
+                
                 //check the downloaded url matches the vidoe thumbnail url that this cell is currently set to display
-                
+                if url?.absoluteString != self.video?.thumbnail {
+                    return
+                }
                 //Create image object
-                
+                let image = UIImage(data: data!)
                 //Set the image view
+                DispatchQueue.main.async {
+                    self.thumbnailImageView.image = image
+                }
             }
         }
+        //start datatask
+        dataTask.resume()
     }
 
 }
