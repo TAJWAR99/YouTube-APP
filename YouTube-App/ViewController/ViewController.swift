@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    
     let model = Model()
     var videos = [Video]()
 
@@ -26,7 +27,20 @@ class ViewController: UIViewController {
         model.delegate = self
         
         model.getVideos()
-        view.backgroundColor = .brown
+        view.backgroundColor = .darkGray
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //check if the video was selected
+        guard tableView.indexPathForSelectedRow != nil else {
+            return
+        }
+        //get a reference to the video that was tapped
+        let selectedVideo = videos[tableView.indexPathForSelectedRow!.row]
+        //get the video property of the detailViewController
+        let detailVC = segue.destination as! DetailViewController
+        //set the video property of the detailViewController
+        detailVC.video = selectedVideo
     }
 
 
